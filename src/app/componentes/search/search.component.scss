@@ -1,0 +1,101 @@
+table {
+    width: 100%;
+}
+
+button{
+
+button.mat-raised-button {
+    min-width: 8.5em;
+}
+
+button.mat-raised-button {
+    border-radius: 0;
+    padding-top: 0.3em;
+    padding-left: 1.5em;
+    padding-bottom: 0.3em;
+    padding-right: 1.5em;
+    &.mat-accent {
+        background-color: #F2F2F2;
+        color: white;
+    }
+    &.mat-normal {
+        background-color: #F2F2F2;
+        color: white;
+    }
+    &.mat-primary {
+        background-color: #F2F2F2;
+        color: white;
+    }
+    &.mat-warning {
+        background-color: #F2F2F2;
+        color: white;
+    }
+    mat-icon {
+        margin-left: -5px;
+        height: 28px;
+    }
+}
+
+button.mat-raised-button:hover {
+    transition: background-color box-shadow 0.1s ease-in-out;
+    background-color: #F2F2F2;
+    padding-top: 0.1em;
+    padding-right: 1.301em;
+    padding-left: 1.301em;
+    padding-bottom: 0.1em;
+    &.mat-normal {
+        border: 0.2em solid #F2F2F2;
+    }
+    &.mat-primary {
+        border: 0.2em solid #F2F2F2;
+    }
+    &.mat-accent {
+        border: 0.2em solid transparent;
+        background-color: #F2F2F2;
+    }
+    &.mat-warning {
+        border: 0.2em solid red;
+    }
+    &[disabled] {
+        border: 0.2em solid transparent;
+        span.mat-button-wrapper {
+            color: rgba(0, 0, 0, 0.26)
+        }
+    }
+    div.mat-button-ripple.mat-ripple {
+        margin: -1px;
+    }
+}
+
+button.mat-normal:hover span.mat-button-wrapper {
+    transition: color 0.05s ease-in-out;
+    color: #F2F2F2;
+}
+
+button.mat-primary:hover span.mat-button-wrapper {
+    transition: color 0.05s ease-in-out;
+    color: #F2F2F2;
+}
+
+button.mat-accent:hover span.mat-button-wrapper {
+    transition: color 0.05s ease-in-out;
+    color: white;
+}
+
+button.mat-warning:hover span.mat-button-wrapper {
+    transition: color 0.05s ease-in-out;
+    color: red;
+}
+
+.mat-flat-button.mat-normal .mat-ripple-element, .mat-raised-button.mat-normal .mat-ripple-element, .mat-fab.mat-normal .mat-ripple-element, .mat-mini-fab.mat-normal .mat-ripple-element {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mat-flat-button.mat-primary .mat-ripple-element, .mat-raised-button.mat-primary .mat-ripple-element, .mat-fab.mat-primary .mat-ripple-element, .mat-mini-fab.mat-primary .mat-ripple-element {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mat-flat-button.mat-accent .mat-ripple-element, .mat-raised-button.mat-accent .mat-ripple-element, .mat-fab.mat-accent .mat-ripple-element, .mat-mini-fab.mat-accent .mat-ripple-element {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+}

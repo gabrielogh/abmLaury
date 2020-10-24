@@ -1,0 +1,47 @@
+
+<form class="example-form">
+  
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+      <td><mat-form-field fomrControl="nombre" class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput>
+      </mat-form-field>
+      </td>
+      <td><mat-form-field fomrControl="apellido" class="example-full-width">
+        <mat-label>Apellido</mat-label>
+        <input matInput>
+      </mat-form-field>
+      </td>
+      </tr>
+    </table>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+            <mat-form-field fomrControl="tipoDoc" appearance="fill">
+                <mat-label>Tipo doc </mat-label>
+                <mat-select placeholder="tipoDoc">
+                <mat-option value="option">Dni</mat-option>
+                <mat-option value="option">Pasaporte</mat-option>
+                <mat-option value="option">Cedula</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-form-field></td>
+        <td><mat-form-field fomrControl="numero" >
+          <mat-label>Numero</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+      </tr>
+   </table>
+
+
+
+  
+    <p>
+      <mat-form-field fomrControl="fechaNac" class="example-full-width">
+        <mat-label>Fecha de nacimiento</mat-label>
+        <textarea matInput placeholder="00/00/0000"></textarea>
+      </mat-form-field>
+
+    </p>
+  </form>

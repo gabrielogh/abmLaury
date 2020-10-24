@@ -1,0 +1,72 @@
+<h1>Busqueda de Personas</h1>
+
+<mat-divider></mat-divider>
+
+<form [formGroup]="buscarPersona">
+    <mat-form-field>
+        <input matInput placeholder="nombre">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Todos</mat-label>
+        <mat-select placeholder="tipoDoc">
+        <mat-option value="option">Dni</mat-option>
+        <mat-option value="option">Pasaporte</mat-option>
+        <mat-option value="option">Cedula</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>
+
+
+<button mat-raised-button (click)="open()" color="primary">Buscar</button>
+
+<button mat-raised-button [routerLink]="['/Nuevo']" color="primary">Nuevo</button>
+
+<mat-divider></mat-divider>
+
+<h1>Lista de Personas</h1>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="apellido">
+        <th mat-header-cell *matHeaderCellDef> Apellido </th>
+        <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="tipoDocumento">
+        <th mat-header-cell *matHeaderCellDef> Tipo Documento </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoDoc}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="numeroDocumento">
+        <th mat-header-cell *matHeaderCellDef> Numero de Documento </th>
+        <td mat-cell *matCellDef="let element"> {{element.nroDoc}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="fechaNacimiento">
+        <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaNac}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
